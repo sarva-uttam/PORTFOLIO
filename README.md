@@ -60,7 +60,15 @@ The site uses **HTML, CSS and JavaScript**, with no frontend framework or applic
 
 ## About this repository
 
-This repository contains the public website release and portfolio presentation. Development planning, working notes and the original development history are maintained separately.
+This repository is the public showcase and deployment repository for my portfolio. The finished website lives in `site/`; GitHub Pages publishes that folder directly, with no build step here. Development source, planning, working notes and development history are maintained in a separate repository.
+
+| Location | Purpose |
+| :--- | :--- |
+| `README.md` | Public profile, selected work and contact links |
+| `site/` | Finished website, animation frames and CV |
+| `.github/workflows/` | Publish the website to GitHub Pages |
+
+Updates are prepared in the development repository, then the finished website files are copied into `site/` for publication.
 
 The browser-delivered HTML, CSS, JavaScript and assets remain publicly readable. This separation keeps internal development work out of the public release while allowing visitors to experience the website.
 
@@ -68,7 +76,7 @@ The browser-delivered HTML, CSS, JavaScript and assets remain publicly readable.
 
 If you are hiring a graduate developer or would like to discuss my work, I would be happy to hear from you.
 
-**[Portfolio](https://sarva-uttam.github.io/PORTFOLIO/)** · **[LinkedIn](https://www.linkedin.com/in/uttam-torry-490702361/)** · **[Email](mailto:uttamtorry@gmail.com)** · **[CV](assets/Uttam-Torry-CV-2026.pdf)**
+**[Portfolio](https://sarva-uttam.github.io/PORTFOLIO/)** · **[LinkedIn](https://www.linkedin.com/in/uttam-torry-490702361/)** · **[Email](mailto:uttamtorry@gmail.com)** · **[CV](site/assets/Uttam-Torry-CV-2026.pdf)**
 
 ---
 

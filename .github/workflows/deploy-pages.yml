@@ -3,6 +3,9 @@ name: Deploy static site to GitHub Pages
 on:
   push:
     branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 # The workflow only reads the repo and publishes Pages. Nothing else.
@@ -31,16 +34,10 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
-      - name: Prepare public website
-        run: |
-          mkdir _site
-          cp index.html m.html faq.html styles.css script.js route.js .nojekyll _site/
-          cp -R assets _site/assets
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
-          path: _site
+          path: site
 
       - name: Deploy to GitHub Pages
         id: deployment
